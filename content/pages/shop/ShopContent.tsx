@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Helmet from 'react-helmet';
 import "./styles.css";
 
 const ShopContent = () => {
-  if (window) {
+  
+  useEffect(() => {
     window.spread_shop_config = {
-        shopName: 'cycling-is-cool',
-        locale: 'us_US',
-        prefix: 'https://shop.spreadshirt.com',
-        baseId: 'shop'
-    };
-  }
+      shopName: 'cycling-is-cool',
+      locale: 'us_US',
+      prefix: 'https://shop.spreadshirt.com',
+      baseId: 'shop'
+  };
+  })
 
   return (
     <div className="shopBody">
