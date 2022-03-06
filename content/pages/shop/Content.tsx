@@ -3,12 +3,14 @@ import Helmet from 'react-helmet';
 import "./styles.css";
 
 const ShopContent = () => {
+  if (window) {
     window.spread_shop_config = {
         shopName: 'cycling-is-cool',
         locale: 'us_US',
         prefix: 'https://shop.spreadshirt.com',
         baseId: 'shop'
     };
+  }
 
   return (
     <div className="shopBody">
