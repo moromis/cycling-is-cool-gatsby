@@ -15,7 +15,7 @@ const HeaderTitle = () => {
       aria-label={`${siteTitle} - Back to home`}
       sx={{ color: `heading`, textDecoration: `none`, display: "flex", alignItems: "center" }}
     >
-      <img src="favicon.png" sx={{ height: [10, 12], mr: [2, 3] }}  />
+      <img src="header-image.png" sx={{ height: [10, 12], mr: [2, 3] }}  />
       <span sx={{ my: 0, fontWeight: `medium`, fontSize: [3, 4] }}>{siteTitle}</span>
     </Link>
   )
