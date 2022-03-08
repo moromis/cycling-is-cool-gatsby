@@ -1,19 +1,19 @@
-import { GatsbyImage } from "gatsby-plugin-image"
-import React from 'react'
-import useGallery from "../../../src/hooks/useGallery"
+/** @jsx jsx */
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { jsx } from 'theme-ui';
+import useGallery from '../../../src/hooks/useGallery';
 
-const Gallery = () => {
-    const images = useGallery()
-    console.log(images)
+function Gallery() {
+  const images = useGallery();
+  console.log(images);
 
-    return (
-        <div>
-            {images.map((image) => (
-                // <Image src={image.gatsbyImageData.images.fallback.src} key={image.id} alt={image.id} />
-                <GatsbyImage objectFit="contain" key={image.id} image={image.gatsbyImageData} alt={image.id} style={{ maxHeight: "100vh" }} />
-            ))}
-        </div>
-    )
+  return (
+    <div>
+      {images.map((image) => (
+        <GatsbyImage sx={{ maxHeight: '100vh', margin: '20px 0' }} objectFit="contain" key={image.id} image={image.gatsbyImageData} alt={image.id} />
+      ))}
+    </div>
+  );
 }
 
-export default Gallery
+export default Gallery;
