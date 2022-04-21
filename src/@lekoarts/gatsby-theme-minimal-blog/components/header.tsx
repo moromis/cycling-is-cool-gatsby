@@ -1,25 +1,25 @@
 /** @jsx jsx */
-import { Flex, jsx, useColorMode } from "theme-ui"
+import { Flex, jsx } from "theme-ui"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
-import ColorModeToggle from "./colormode-toggle"
+// import ColorModeToggle from "./colormode-toggle"
 import HeaderExternalLinks from "./header-external-links"
 import HeaderTitle from "./header-title"
 import Navigation from "./navigation"
 
 const Header = () => {
   const { navigation: nav } = useMinimalBlogConfig()
-  const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === `dark`
-  const toggleColorMode = (e: React.SyntheticEvent) => {
-    e.preventDefault()
-    setColorMode(isDark ? `light` : `dark`)
-  }
+  // const [colorMode, setColorMode] = useColorMode()
+  // const isDark = colorMode === `dark`
+  // const toggleColorMode = (e: React.SyntheticEvent) => {
+  //   e.preventDefault()
+  //   setColorMode(isDark ? `light` : `dark`)
+  // }
 
   return (
     <header sx={{ mb: [1, 2] }}>
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
         <HeaderTitle />
-        <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
+        {/* <ColorModeToggle isDark={isDark} toggle={toggleColorMode} /> */}
       </Flex>
       <div
         sx={{
